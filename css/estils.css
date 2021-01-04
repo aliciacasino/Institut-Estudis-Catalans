@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Serif', serif;
+}
+a, abbr {
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+p {
+    line-height: 1.5em;
+}
+/* HEADER */
+div.portada {
+    background-image: url(../img/portada-llibres.jpg);
+}
+h1 {
+    text-align: center;
+    height: 150px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+h1 span {
+    background-color: rgba(80%, 0%, 0%, 0.7);
+    padding: 10px 50px;
+}
+nav {
+    background-color: #c00;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+nav ul li {
+    padding: 15px 0;
+    width: 130px;
+    text-align: center;
+    cursor: pointer;
+}
+nav ul li:hover {
+    background-color: #851608;
+}
+nav ul li.items {
+    position: relative;
+    width: auto;
+    text-align: center;
+    order: 3;
+}
+nav ul li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 0 30px;
+}
+nav ul li span {
+    font-size: 23px;
+}
+nav ul li.btn {
+    display: none;
+}
+@media all and (max-width: 1100px){
+    nav ul {
+        max-width: 1050px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav ul li.items {
+        width: 100%;
+        display: none;
+        border-top: 0.5px solid #851608;
+    }
+    nav ul li.items:hover {
+        background-color: #851608;
+    }
+    nav ul li.items.show {
+        display: block;
+    }
+    nav ul li.btn {
+        display: block;
+    }
+    nav ul li a {
+        margin: 0;
+    }
+}
+/* FI HEADER */
+
+
+/* MAIN */
+main {
+    width: 90%;
+    padding: 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 576px) {
+    main {
+        width: 80%;
+        max-width: 1050px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+section {
+    margin-bottom: 100px;
+}
+section form input {
+    width: 100%;
+    padding: 10px;
+    margin-top:10px;
+}
+.amaga {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}    
+form a {
+    width: auto;
+}
+div.divboto {
+    text-align: center;
+}
+a.boto {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #c00;
+    color: #fff;
+    display: block;
+}
+@media (min-width: 768px) {
+    a.boto {
+        width: 200px;
+        display: inline-block;
+    }
+}
+a.boto:hover {
+    background-color: #851608;
+}
+main section div div.noticia:nth-child(1), main section div div.noticia:nth-child(2) {
+    margin-bottom: 50px;
+}
+div.noticia p {
+    margin-bottom: 10px;
+}
+div.espai-foto {
+    text-align: center;
+}
+@media (min-width: 1200px) {
+    div.divideix {
+        display: flex;
+        align-items: center;
+    }
+    div.espai-foto {
+        margin-left: 10px;
+    }
+}
+h2 {
+    margin: 20px 0;
+    border-bottom: 5px solid #c00;
+}
+h3 + p {
+    font-size: 0.7em;
+}
+p.llegir a {
+    color: #c00;
+}
+p.llegir a:hover {
+    color: #851608;
+}
+section div.agenda div {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px dotted #c00;
+}
+section div.agenda div p:first-of-type {
+    color: #c00;
+}
+span.xerrada, p.autoria {
+    font-style: italic;
+}
+p.autoria {
+    margin-bottom: 50px;
+}
+div.informes div div {
+    text-align: center;
+}
+div.informes div + p {
+    font-weight: bold;
+}
+@media (min-width: 768px) {
+    div.informes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        column-gap: 20px;
+    }
+    p.autoria {
+        margin-bottom: 0;
+    }
+}
+@media (min-width: 768px) {
+    .grid-diccionari {
+        grid-area: diccionari;
+    }
+    .grid-noticia {
+        grid-area: noticia;
+    }
+    .grid-agenda {
+        grid-area: agenda;
+    }
+    .grid-informe {
+        grid-area: informe;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 100px;
+        grid-template-areas: 
+            "noticia noticia diccionari"
+            "noticia noticia agenda"
+            "noticia noticia ..."
+            "informe informe informe";
+    }
+}
+div.calendari h2, div.calendari button {
+    display: none;
+}
+div.calendari {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+div.calendari div.fc {
+    text-align: center;
+}
+/* FI MAIN */
+
+
+
+/* FOOTER */
+footer {
+    background-color: #202020;
+    padding: 30px;
+    color: #fff;
+    text-align: center;
+    font-size: 0.9em;
+}
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+footer ul li {
+    margin: 0 10px;
+}
+footer a {
+    color: #fff;
+}
+footer div div {
+    margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+    footer div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    footer div div {
+        margin-bottom: 0;
+    }
+}
+/* FI FOOTER */
